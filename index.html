@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <img src="icon.jpg" alt="Tic Tac Toe">
+            <h1>Tic-Tac-Toe</h1>
+        </div>
+        <div class="subtitle">Play the classic game!</div>
+        <div id="turn-indicator">Player X's Turn</div>
+        <div id="print"></div>
+        <div class="grid">
+            <button id="b1" onclick="makeMove(this)"></button>
+            <button id="b2" onclick="makeMove(this)"></button>
+            <button id="b3" onclick="makeMove(this)"></button>
+            <button id="b4" onclick="makeMove(this)"></button>
+            <button id="b5" onclick="makeMove(this)"></button>
+            <button id="b6" onclick="makeMove(this)"></button>
+            <button id="b7" onclick="makeMove(this)"></button>
+            <button id="b8" onclick="makeMove(this)"></button>
+            <button id="b9" onclick="makeMove(this)"></button>
+        </div>
+        <button id="resetButton" onclick="showResetModal()">Reset Game</button>
+        <div id="leaderboard">
+            <div id="XWins">X Wins: <span id="playerXWins">0</span></div>
+            <div id="OWins">O Wins: <span id="playerOWins">0</span></div>
+        </div>
+        <button id="resetScoresButton" onclick="resetScores()">Reset Scores</button>
+    </div>
+
+    <div id="resetModal" class="modal">
+        <div class="modal-content">
+            <h2>Are you sure you want to reset the game?</h2>
+            <button class="confirm" onclick="resetGame()">Yes</button>
+            <button class="cancel" onclick="closeResetModal()">No</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
